@@ -19,12 +19,23 @@ namespace ConsoleApp19
             int[] numb = { 5,1,2,3 };
 
             //1
-            var a = new Metod();
-            Parn pa = a.Par;
+            Parn pa = delegate (int a)
+            {
+                if (a % 2 == 0)
+                {
+                    Console.WriteLine("Parne");
+                }
+                else
+                {
+                    Console.WriteLine("ne parne");
+                }
+            };
             pa(5);
             //2
-            var b = new Metod();
-            Parn kva = b.kvad;
+            Parn kva = delegate (int a)
+            {
+                Console.WriteLine(a * a);
+            };
             kva(3);
             //3
             Parn del_3 = (int a) =>
@@ -75,21 +86,5 @@ namespace ConsoleApp19
             del_7(numb);
         }
 
-    }
-    public class Metod
-    {
-        public void Par(int a)
-        {
-            if (a % 2 == 0)
-            {
-                Console.WriteLine("Parne");
-            }
-            else { Console.WriteLine("ne parne"); }
-        }
-        public void kvad(int a)
-        {
-            
-           Console.WriteLine(a*a);
-        }
     }
 }
