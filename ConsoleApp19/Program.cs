@@ -19,21 +19,21 @@ namespace ConsoleApp19
             int[] numb = { 5,1,2,3 };
 
             //1
-            var a = new A();
+            var a = new Metod();
             Parn pa = a.Par;
             pa(5);
             //2
-            var b = new A();
+            var b = new Metod();
             Parn kva = b.kvad;
             kva(3);
             //3
-            Parn del_2 = (int a) =>
+            Parn del_3 = (int a) =>
             {
                 Console.WriteLine(a*a*a);
             };
-            del_2(2);
+            del_3(2);
             //4
-            Parn1 del_3 = (string a) =>
+            Parn1 del_4 = (string a) =>
             {
                 if (int.TryParse(a, out int day))
                 {
@@ -47,22 +47,22 @@ namespace ConsoleApp19
                     }
                 }
             };
-            del_3("256");
+            del_4("256");
             //5
-            Parn12 del_4 = (int[] a) =>
+            Parn12 del_5 = (int[] a) =>
             {
                 Console.WriteLine(a.Max());
             };
-            del_4(numb);
+            del_5(numb);
             //6
-            Parn12 del_5 = (int[] a) =>
+            Parn12 del_6 = (int[] a) =>
             {
                 Console.WriteLine(a.Min());
             };
-            del_5(numb);
+            del_6(numb);
             //7
             Console.WriteLine("ne par v mass");
-            Parn12 del_6 = (int[] a) =>
+            Parn12 del_7 = (int[] a) =>
             {              
                 foreach (int num in a)
                 {
@@ -72,41 +72,11 @@ namespace ConsoleApp19
                     
                 }
             };
-            del_6(numb);
-
-            //Delegate_1 del_1 = delegate (string str)
-            //{
-            //    Console.WriteLine(str);
-            //    return str;
-            //};
-            ////делегати
-            //var a = new A();
-            //MyDelegate del = a.Show;
-            //del();
-            //Delegate_1 del_1 = delegate (string str)
-            //{
-            //    Console.WriteLine(str);
-            //    return str;
-            //};
-            //del_1("Hello");
-
-
-            ////лямбда
-
-
-            //Delegate_1 del_2 = (str) =>
-            //{
-            //    Console.WriteLine(str);
-            //    return "Hello";
-            //};
-            //MyDelegate del_3 = () =>
-            //{
-            //    Console.WriteLine("Maksym");   
-            //};
+            del_7(numb);
         }
 
     }
-    public class A
+    public class Metod
     {
         public void Par(int a)
         {
